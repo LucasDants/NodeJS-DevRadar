@@ -1,8 +1,9 @@
-const Dev = require('../models/Dev')
-const parseStringAsArray = require('../utils/parseStringAsArray')
+import { Request, Response } from "express"
+import parseStringAsArray from '../utils/parseStringAsArray'
+import Dev from '../models/Dev'
 
-module.exports = {
-    async index(request, response) {
+export default {
+    async index(request: Request, response: Response) {
         console.log(request.query)
         const { latitude, longitude, techs } = request.query
         
@@ -23,11 +24,6 @@ module.exports = {
                 },
             },
         })
-        console.log(devs)
-
-        //buscar todos os devs num raio de 10km
-        //filtrar por tecnologias
-        console.log(techsArray, "ok")
         return response.json({ devs })
     }
 }
