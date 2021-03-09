@@ -18,7 +18,7 @@ export default {
 
         if (!dev) {
             const apiResponse = await axios.get(`https://api.github.com/users/${github_username}`)
-            const { name = login, avatar_url, bio } = apiResponse.data
+            const { login, avatar_url, bio } = apiResponse.data
 
             const techsArray = parseStringAsArray(techs)
 
@@ -28,7 +28,7 @@ export default {
             }
             dev = await Dev.create({
                 github_username,
-                name,
+                name: login,
                 avatar_url,
                 bio,
                 techs: techsArray,
@@ -46,10 +46,10 @@ export default {
     },
     async update (request: Request, response: Response) {
         const { github_username } = request.params;
-        const { techs, ...rest } = request.body;
+        const { techs, ...rest } = request.body;    
         rest.github_username = github_username;
 
-        const dev = await Dev.findOne({ github_username });
+        const dev = await Dev.findOne({ github_username }) as any
 
         if (techs) var techsArray = parseStringAsArray(techs);
 

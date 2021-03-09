@@ -2,11 +2,11 @@ import express from 'express'
 import mongoose from 'mongoose'
 import routes from './routes'
 import cors from 'cors'
-import http from 'http'
+import { Server} from 'http'
 import { setupWebsocket } from './websocket'
 
 const app = express();
-const server = new http.Server(app)
+const server = new Server(app)
 
 setupWebsocket(server)
 
