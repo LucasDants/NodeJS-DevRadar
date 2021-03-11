@@ -7,6 +7,7 @@ DevRadar API
 
 <p align="center">DevRadar is a Restfull API of <a href="https://github.com/Luksdantas/ReactJS-DevRadar">DevRadar Web</a> and <a href="https://github.com/Luksdantas/ReactNative-DevRadar">DevRadar Mobile</a> </p>
 
+
 <p align="center">
  <img  src="https://img.shields.io/github/package-json/dependency-version/LuksDantas/NodeJS-DevRadar/express" alt="Express Version">
  <img  src="https://img.shields.io/github/package-json/dependency-version/LuksDantas/NodeJS-DevRadar/cors" alt="Cors Version">
@@ -18,6 +19,8 @@ DevRadar API
 
 <h1>:memo:About</h1>
 <p>DevRadar API is a project developed during the <a href="https://rocketseat.com.br/">Semana Omnistack</a> presented by <a href="https://www.linkedin.com/school/rocketseat/">Rockeseat</a>.</p>
+<p>WEB: <a href="https://github.com/Luksdantas/ReactJS-DevRadar">DevRadar Web</a></p>
+<p>API: <a href="https://github.com/Luksdantas/ReactNative-DevRadar">DevRadar Mobile</a></p>
 
 <h1>:rocket: Getting started</h1>
 
