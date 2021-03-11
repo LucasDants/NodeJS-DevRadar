@@ -10,7 +10,7 @@ const server = new Server(app)
 
 setupWebsocket(server)
 
-mongoose.connect('mongodb+srv://devRadar:devRadar@devradar.3a8b7.mongodb.net/devRadar?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://<user>:<password>@<cluster>', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })

@@ -46,16 +46,20 @@ export default {
     },
     async update (request: Request, response: Response) {
         const { github_username } = request.params;
-        const { techs, ...rest } = request.body;    
-        rest.github_username = github_username;
-
+        const { techs, longitude, latitude } = request.body;    
         const dev = await Dev.findOne({ github_username }) as any
 
         if (techs) var techsArray = parseStringAsArray(techs);
 
+            const location = {
+                type: 'Point',
+                coordinates: [longitude, latitude]
+            }
+
         const changedDev = await Dev.updateOne({ github_username }, {
             techs: techs ? techsArray : dev.techs,
-            ...rest
+            github_username,
+            location
         });
 
         return response.json(changedDev);

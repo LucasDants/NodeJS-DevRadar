@@ -5,7 +5,6 @@ import Dev from '../models/Dev'
 export default {
     async index(request: Request, response: Response) {
         const { latitude, longitude, techs} = request.query
-        
         const techsArray = parseStringAsArray(techs as string)
         
         const devs = await Dev.find({
