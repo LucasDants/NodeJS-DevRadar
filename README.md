@@ -30,7 +30,7 @@ DevRadar API
 $ git clone https://github.com/Luksdantas/NodeJS-DevRadar.git
 
 # Access the project folder cmd/terminal
-$ cd NodeJS-NPS
+$ cd NodeJS-DevRadar
 
 # install the dependencies
 $ npm install
